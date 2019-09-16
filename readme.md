@@ -17,18 +17,25 @@ https://www.ncbi.nlm.nih.gov/pubmed/?term=Autism
 CREATE TABLE `article` (
   `a_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '文章id',
   `title` varchar(150) not null COMMENT '标题',
-  `author` varchar(100) not null COMMENT '中文简介',
-  `pub_time` int(10) not null DEFAULT '0' COMMENT '发布时间',
+  `author` varchar(100) not null COMMENT '作者名字',
+  `pub_time` varchar(20) not null DEFAULT '0' COMMENT '发布时间',
   `pmid` int(10) not null DEFAULT '0' COMMENT '文献id',
   `type` varchar(100) not null DEFAULT '' COMMENT '疾病类型',
-  `keywords` varchar(100) not null DEFAULT '' COMMENT '关键词',
-  `author_info` varchar(255) not null DEFAULT '' COMMENT '作者信息',
+  `keywords` varchar(255) not null DEFAULT '' COMMENT '关键词',
+  `author_info` text COMMENT '作者信息',
   `create_time` int(10) not null DEFAULT '0' COMMENT '创建时间',
   `update_time` int(10) not null DEFAULT '0' COMMENT '更新时间',
   PRIMARY KEY (`a_id`),
   KEY `type` (`type`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='文章数据表';
+alter table `article` add abstract text;
 ```
 
 账号：root
 密码：mPbWAWNH?4d*
+
+### driver 
+http://chromedriver.storage.googleapis.com/index.html
+
+### regex tester
+https://regex101.com/
