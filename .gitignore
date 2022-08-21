@@ -1,6 +1,15 @@
 data/
 
 googleSpider/docs
+*/*.doc
+*/*.docx
+
+docs
+docs1
+
+
+docs/
+docs1/
 
 *zip*
 # Byte-compiled / optimized / DLL files
